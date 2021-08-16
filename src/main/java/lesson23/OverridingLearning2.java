@@ -15,8 +15,11 @@ public class OverridingLearning2 {
     }
 }
 
-class Food {}
-class Fruit extends Food {}
+class Food {
+}
+
+class Fruit extends Food {
+}
 
 class Employee2 {
     String name;
@@ -28,7 +31,7 @@ class Employee2 {
         System.out.println("Employee is eating");
     }
 
-    Food eat2(){
+    Food eat2() {
         System.out.println("Employee is eating food");
         Food food = new Food();
         return food;
@@ -47,7 +50,9 @@ class Teacher2 extends Employee2 {
         System.out.println("Teacher is eating");
     }
 
-    public Fruit eat2(){
+
+    @Override
+    public Fruit eat2() {
         System.out.println("Teacher is eating fruit");
         Fruit fruit = new Fruit();
         return fruit;
