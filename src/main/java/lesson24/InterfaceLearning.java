@@ -1,6 +1,20 @@
 package lesson24;
 
 public class InterfaceLearning {
+    public static void main(String[] args) {
+        HelpAble h = new Driver();
+        SwimAble s = new Driver();
+        Employee e = new Driver();
+
+        System.out.println(h.a);
+//        System.out.println(h.salary);
+//        System.out.println(h.carName);
+        h.help();
+        h.extinguishTheFire("water");
+//        h.eat();
+//        h.drive();
+        s.swim();
+    }
 }
 
 interface HelpAble {
@@ -31,23 +45,7 @@ class Employee {
     }
 }
 
-class Teacher extends Employee implements HelpAble {
-    int numberOfPupils;
-
-    void teach() {
-        System.out.println("Teaching");
-    }
-
-    public void help() {
-        System.out.println("Teacher helps");
-    }
-
-    public void extinguishTheFire(String s) {
-        System.out.println("Teacher extinguishes the fire with " + s);
-    }
-}
-
-class Driver implements HelpAble, SwimAble{
+class Driver extends Employee implements HelpAble, SwimAble{
     String carName;
 
     void drive() {
@@ -64,6 +62,23 @@ class Driver implements HelpAble, SwimAble{
 
     public void swim() {
         System.out.println("Driver swims");
+    }
+}
+
+
+class Teacher extends Employee implements HelpAble {
+    int numberOfPupils;
+
+    void teach() {
+        System.out.println("Teaching");
+    }
+
+    public void help() {
+        System.out.println("Teacher helps");
+    }
+
+    public void extinguishTheFire(String s) {
+        System.out.println("Teacher extinguishes the fire with " + s);
     }
 }
 
