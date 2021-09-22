@@ -9,22 +9,20 @@ interface SpeakAble {
 abstract class Animal {
     String name;
 
-    Animal(String name2){
-        name = name2;
+    Animal(String name){
+        this.name = name;
     }
 
     abstract void eat();
 
     abstract void sleep();
 
-    public void getName(Animal animal){
-        System.out.println("Animal's name is " + animal.name);
-    }
 }
 
 abstract class Fish extends Animal{
     Fish(String name){
         super(name);
+        this.name = name;
     }
     void sleep(){
         System.out.println("It's always interesting to observe how fishes sleep");
@@ -35,6 +33,7 @@ abstract class Fish extends Animal{
 abstract class Bird extends Animal implements SpeakAble{
     Bird(String name){
         super(name);
+        this.name = name;
     }
     abstract void fly();
 
@@ -46,6 +45,7 @@ abstract class Bird extends Animal implements SpeakAble{
 abstract class Mammal extends Animal implements SpeakAble {
     Mammal(String name){
         super(name);
+        this.name = name;
     }
     abstract void run();
 }
@@ -53,6 +53,7 @@ abstract class Mammal extends Animal implements SpeakAble {
 class Swordfish extends Fish{
     Swordfish(String name){
         super(name);
+        this.name = name;
     }
     public void swim(){
         System.out.println("Swordfish is a beautiful fish which swims quickly");
@@ -65,6 +66,7 @@ class Swordfish extends Fish{
 class Penguin extends Bird{
     Penguin(String name){
         super(name);
+        this.name = name;
     }
     public void eat(){
         System.out.println("Penguins like to eat fish");
@@ -83,6 +85,7 @@ class Penguin extends Bird{
 class Lion extends Mammal {
     Lion(String name) {
         super(name);
+        this.name = name;
     }
     public void eat(){
         System.out.println("Lion like any predator likes meat");
@@ -106,12 +109,12 @@ class Lesson24{
         penguin.speak();
 
         Animal lion1 = new Lion("Simba");
-        lion1.getName(lion1);
+        System.out.println(lion1.name);
         lion1.eat();
         lion1.sleep();
 
         Mammal lion2 = new Lion("Mufasa");
-        lion1.getName(lion2);
+        System.out.println(lion2.name);
         lion2.eat();
         lion2.sleep();
         lion2.run();
