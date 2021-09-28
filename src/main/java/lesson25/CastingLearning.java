@@ -25,5 +25,19 @@ public class CastingLearning {
         float f = 3.14f;
         int i6 = 10;
         System.out.println(f + i6);
+
+        byte b3 = 3;
+        short s3 = 4;
+        char c4 = 5;
+        System.out.println(b3 + s3 + c4); //all are converted to int
+        System.out.println(b3++); //byte is NOT converted to int
+
+        byte b4 = 10;
+        float f1 = 7;
+        double d1 = 2.0;
+        System.out.println(b4 + f1 - d1);
+
+        float f2 = 0 * 1.5f;
+        float f3 = 0 * (float)1.5;
     }
 }
