@@ -97,7 +97,7 @@ class Lion extends Mammal {
     }
 }
 
-class Lesson24{
+class Lesson24 {
     public static void main(String[] args) {
         Swordfish swordfish = new Swordfish("Nemo");
         swordfish.eat();
@@ -119,7 +119,7 @@ class Lesson24{
         lion2.run();
         lion2.speak();
 
-        System.out.println("");
+        System.out.println("---------------------------------------------------");
 
         SpeakAble a1 = new Penguin("a1");
         SpeakAble a2 = new Lion("a2");
@@ -136,17 +136,49 @@ class Lesson24{
         Penguin a10 = new Penguin("a10");
         Lion a11 = new Lion("a11");
 
-        SpeakAble [] array1 = {a1, a2, a7, a8, a10, a11};
-        Animal [] array2 = {a3, a4, a5, a6, a7, a8, a9, a10, a11};
+        SpeakAble[] array1 = {a1, a2, a7, a8, a10, a11};
+        Animal[] array2 = {a3, a4, a5, a6, a7, a8, a9, a10, a11};
 
-        for (SpeakAble s : array1){
-            s.speak();
+        for (SpeakAble s : array1) {
+            if (s instanceof Penguin) {
+                Penguin penguin2 = (Penguin) s;
+                System.out.println(penguin2.name);
+                penguin2.eat();
+                penguin2.sleep();
+                penguin2.fly();
+                penguin2.speak();
+            } else if (s instanceof Lion) {
+                Lion lion3 = (Lion) s;
+                System.out.println(lion3.name);
+                lion3.eat();
+                lion3.sleep();
+                lion3.run();
+                lion3.speak();
+            }
         }
 
-        for (Animal a : array2){
-            System.out.println(a.name);
-            a.eat();
-            a.sleep();
+        for (Animal a : array2) {
+            if (a instanceof Swordfish) {
+                Swordfish swordfish2 = (Swordfish) a;
+                System.out.println(swordfish2.name);
+                swordfish2.eat();
+                swordfish2.sleep();
+                swordfish2.swim();
+            } else if (a instanceof Penguin) {
+                Penguin penguin3 = (Penguin) a;
+                System.out.println(penguin3.name);
+                penguin3.eat();
+                penguin3.sleep();
+                penguin3.fly();
+                penguin3.speak();
+            } else if (a instanceof Lion) {
+                Lion lion4 = (Lion) a;
+                System.out.println(lion4.name);
+                lion4.eat();
+                lion4.sleep();
+                lion4.run();
+                lion4.speak();
+            }
         }
     }
 }
