@@ -29,3 +29,78 @@ class A{
         b = 20;
     }
 }
+
+class B{
+    static int c;
+    static final int d;
+    static final int e = 1;
+    static final int f;
+
+    static{
+        c = 5;
+        d = 3;
+//        e = 2;
+        f = 0;
+    }
+}
+
+class C{
+    String s = "ok";
+    static int i = 0;
+
+    {
+        System.out.println(s);
+    }
+
+    static {
+        System.out.println(i);
+    }
+
+    {
+        i += 1;
+        System.out.println(i);
+    }
+
+    C(){
+        System.out.println("There is a constructor");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Hi");
+        C c = new C();
+    }
+}
+
+class D{
+    static{
+        abc(2);
+    }
+
+    static void abc(int a){
+        System.out.println(a + " ");
+    }
+
+    D(){
+        abc(5);
+    }
+
+    static{
+        abc(4);
+    }
+
+    {
+        abc(6);
+    }
+
+    static{
+        new D();
+    }
+
+    {
+        abc(8);
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
