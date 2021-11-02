@@ -17,6 +17,7 @@ public class TryCatchLearning2 {
         } catch (FileNotFoundException e) {
             System.out.println("The exception is caught:" + e);
         } catch (IOException e) {
+            IOException i = e;
             System.out.println("The exception is caught:" + e);
         } finally {
             System.out.println("This is finally block");
@@ -48,7 +49,7 @@ public class TryCatchLearning2 {
         }
     }
 
-    void jkl() throws FileNotFoundException{
+    void jkl() throws IOException{
         abc();
         def();
     }
