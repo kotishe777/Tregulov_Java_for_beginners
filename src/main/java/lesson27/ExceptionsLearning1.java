@@ -1,6 +1,6 @@
 package lesson27;
 
-public class ExceptionsLearning {
+public class ExceptionsLearning1 {
 
     void abc() throws NullPointerException {
         String s = null;
