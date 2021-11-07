@@ -1,4 +1,4 @@
-package lesson27;
+package lesson27_28;
 
 public class TryCatchLearning1 {
     public static void main(String[] args) {
