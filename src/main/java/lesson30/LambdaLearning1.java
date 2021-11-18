@@ -2,8 +2,7 @@ package lesson30;
 
 import java.util.ArrayList;
 
-public class LambdaLearning {
-
+public class LambdaLearning1 {
 }
 
 class Student{
