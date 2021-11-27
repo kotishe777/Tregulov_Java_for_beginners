@@ -2,7 +2,7 @@ package lesson31;
 
 import java.util.ArrayList;
 
-public class GenericsLearning {
+public class GenericsLearning1 {
 
     public static void main(String[] args) {
         ArrayList<String> al = new ArrayList<>();
@@ -16,6 +16,14 @@ public class GenericsLearning {
         String s = info1.getValue();
         Integer i = info2.getValue();
     }
+
+    public void method1(Info<String> info){
+        String s = info.getValue();
+    }
+
+//    public void method1(Info<Integer> info){
+//        Integer i = info.getValue();
+//    }
 }
 
 
@@ -33,4 +41,18 @@ class Info<T>{
     public T getValue(){
         return value;
     }
+}
+
+class Parent{
+
+    public void method1(Info<String> info){
+        String s = info.getValue();
+    }
+}
+
+class Child extends Parent{
+
+//    public void method1(Info<Integer> info){
+//        Integer i = info.getValue();
+//    }
 }
